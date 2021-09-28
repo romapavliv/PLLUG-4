@@ -6,3 +6,5 @@ function stringCaseChanger(word) {
     }
    return result.join('');
  }
+
+Умови в циклі можна упростити.
