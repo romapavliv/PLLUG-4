@@ -34,5 +34,5 @@ function sort(obj) {
     return res;
 }
 
-
+Завдання виконано неповністю.
 
