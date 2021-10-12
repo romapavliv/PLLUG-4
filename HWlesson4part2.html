@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function ready() {
+            console.log(new Date().toString())
+        }
+
+        document.addEventListener("DOMContentLoaded", ready);
+
+        window.onload = function() {
+            console.log(new Date().toString())
+        }
+
+        let analyticsData = {};
+
+        window.addEventListener("unload", function() {
+            navigator.sendBeacon("/analytics", JSON.stringify(analyticsData));
+        });
+
+        window.onbeforeunload = function() {
+            return false;
+        };
+
+        console.log('Browser Name :' + navigator.appName + ' Platform: ' + navigator.platform);
+    </script>
+
+    <img src="./../RegistrationPage/img/Mask Group 43.png" alt="massageImage">
+
+</body>
+
+</html>
