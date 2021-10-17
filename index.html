@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Homework</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul id="animals">
+            <li class="pet">Dog</li>
+            <li id="cat" class="pet">Cat</li>
+            <li class="wild">Elephant</li>
+            <li class="wild">Whale</li>
+            <li class="wild">Horse</li>
+            <li class="wild dangerous">Tiger</li>
+        </ul>
+        <ul id="birds">
+            <li class="wild">Eagle</li>
+            <li class="wild">Sparrow</li>
+            <li class="pet wild">Parrot</li>
+        </ul>
+    </div>
+    <script>
+        // font size boost function
+
+        function boostFontSize() {
+            let animals = document.querySelectorAll('#animals li');
+            animals.forEach((node) => {
+                node.setAttribute("style", "font-size:40px")
+            });
+        };
+
+        // delete class last element animal list
+
+        function deleteClasses() {
+            document.querySelector('#animals li:last-child').removeAttribute('class');
+        };
+
+        // background color changer next item after id=cat
+
+        function backgroundColorChanger() {
+            document.querySelector('#animals #cat ~ .wild').setAttribute("style", "background-color:red");
+        };
+
+        // font color red function by class name
+
+        function fontColorRedChanger() {
+            document.querySelectorAll('.dangerous').setAttribute("style", "color:red");
+        };
+
+        // Незнаю як доробити це завдання
+
+        function removeElementsByClass() {
+            let elements = document.getElementsByClassName('pet');
+            while (elements.length > 0) {
+                elements[0].parentNode.removeChild(elements[0]);
+            }
+        };
+
+        // add new element into birds list start
+
+        function addNewElementStart(element) {
+            let list = document.getElementById('birds');
+            let item = document.createElement('item');
+            item.prepend(document.createTextNode(element));
+            list.prepend(item);
+        };
+
+        // add new element into birds list end
+
+        function addNewElementEnd(element) {
+            let list = document.getElementById('birds');
+            let item = document.createElement('item');
+            item.appendChild(document.createTextNode(element));
+            list.appendChild(item);
+        };
+    </script>
+</body>
+
+</html>
