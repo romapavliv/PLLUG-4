@@ -26,3 +26,5 @@ _("#reset-canvas").addEventListener("click", function() {
 _("#save-canvas").addEventListener("click", function() {
     saveCanvas(canvas, "sketch", "png");
 });
+
+Задання виконано
