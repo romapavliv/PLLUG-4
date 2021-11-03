@@ -153,3 +153,5 @@ function previewAnduploadImage(image) {
     ajax.send(formData);
 
 }
+
+Завдання виконано неповністю
