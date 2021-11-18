@@ -70,3 +70,4 @@ function addPlaces(places, map) {
         }
     }
 }
+Завдання виконано
